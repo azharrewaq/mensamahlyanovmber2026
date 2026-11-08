@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>منصة الجامع الأزهر للمقيمين بمصر | الاستعلام عن موعد تحديد المستوى</title>
+<meta name="description" content="الاستعلام عن موعد تحديد المستوى — دفعة نوفمبر 2026">
+<!-- معاينة الرابط عند المشاركة (واتساب / فيسبوك / تيليجرام / X) -->
+<!-- مهم: استبدل https://USERNAME.github.io/REPO/ برابط موقعك الفعلي في السطرين og:url و og:image -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:site_name" content="منصة الجامع الأزهر للمقيمين بمصر">
+<meta property="og:title" content="منصة الجامع الأزهر للمقيمين بمصر">
+<meta property="og:description" content="الاستعلام عن موعد تحديد المستوى — دفعة نوفمبر 2026">
+<meta property="og:url" content="https://USERNAME.github.io/REPO/">
+<meta property="og:image" content="https://USERNAME.github.io/REPO/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="منصة الجامع الأزهر للمقيمين بمصر">
+<meta name="twitter:description" content="الاستعلام عن موعد تحديد المستوى — دفعة نوفمبر 2026">
+<meta name="twitter:image" content="https://USERNAME.github.io/REPO/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f7f5; --card:#ffffff; --ink:#16241c; --muted:#5b6b62; --line:#dfe7e2;
+  --brand:#0f5c3f; --brand-2:#0b4630; --accent:#b8892b; --soft:#e8f3ed; --warn:#fff6e0; --warn-ink:#6b4a00;
+  --err:#a42a2a; --shadow:0 10px 30px rgba(15,60,40,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1612; --card:#16211b; --ink:#e8f0ea; --muted:#9db0a5; --line:#26362d;
+    --brand:#3fb98a; --brand-2:#2f9a71; --accent:#e0b04f; --soft:#1b2c24; --warn:#2c2410; --warn-ink:#f0d48a;
+    --err:#f08a8a; --shadow:none;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Tajawal",system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;line-height:1.7;font-size:17px}
+.hero{background:linear-gradient(160deg,var(--brand-2),var(--brand));color:#fff;padding:34px 16px 70px;text-align:center;position:relative}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:6px;background:var(--accent)}
+.hero small{display:block;opacity:.85;font-weight:500;margin-bottom:6px}
+.hero h1{margin:0;font-size:clamp(22px,5vw,32px);font-weight:800;line-height:1.5}
+.hero p{margin:8px 0 0;opacity:.92;font-size:16px}
+main{max-width:720px;margin:-44px auto 40px;padding:0 16px;position:relative;z-index:1}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+label{display:block;font-weight:700;margin-bottom:8px}
+.row{display:flex;gap:10px}
+input[type=search]{flex:1;min-width:0;font:inherit;font-size:18px;padding:14px 16px;border-radius:12px;border:2px solid var(--line);background:var(--bg);color:var(--ink);outline:none}
+input[type=search]:focus{border-color:var(--brand)}
+button.go{font:inherit;font-weight:700;background:var(--brand);color:#fff;border:0;border-radius:12px;padding:0 22px;cursor:pointer;min-height:52px}
+button.go:hover{background:var(--brand-2)}
+.hint{color:var(--muted);font-size:14.5px;margin:10px 0 0}
+#out{margin-top:18px}
+.msg{padding:14px 16px;border-radius:12px;background:var(--soft)}
+.msg.err{background:var(--warn);color:var(--warn-ink)}
+.result{border:2px solid var(--brand);border-radius:16px;overflow:hidden;margin-top:12px;animation:in .25s ease}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.result .who{background:var(--soft);padding:14px 16px;font-weight:800;font-size:19px}
+.result dl{margin:0;padding:6px 16px 14px;display:grid;grid-template-columns:auto 1fr;gap:6px 14px}
+.result dt{color:var(--muted);font-weight:500}
+.result dd{margin:0;font-weight:700}
+.big{font-size:19px;color:var(--brand)}
+@media(max-width:480px){.result dl{grid-template-columns:1fr;gap:0}.result dd{margin-bottom:10px}.btn{font-size:16px}}
+.pick{width:100%;text-align:right;font:inherit;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:8px;cursor:pointer;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.pick:hover,.pick:focus-visible{border-color:var(--brand);background:var(--soft);outline:none}
+.pick span:last-child{color:var(--muted);font-size:14px;white-space:nowrap}
+.notice{margin-top:18px;background:var(--warn);color:var(--warn-ink);border-radius:14px;padding:16px;font-size:16px}
+.notice b{color:inherit}
+.links{display:grid;gap:10px;margin-top:16px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:700;padding:14px 16px;border-radius:12px;text-align:center}
+.btn.main{background:var(--brand);color:#fff}
+.btn.main:hover{background:var(--brand-2)}
+.btn.wa{background:#1fa855;color:#fff}
+.btn.wa:hover{background:#188a45}
+.help{margin-top:18px;border-top:1px dashed var(--line);padding-top:16px;color:var(--muted);font-size:15.5px}
+footer{text-align:center;color:var(--muted);font-size:13.5px;padding:0 16px 30px}
+#loading{color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="hero">
+  <small>منصة الجامع الأزهر للمقيمين بمصر</small>
+  <h1>الاستعلام عن موعد تحديد المستوى</h1>
+  <p>دفعة نوفمبر 2026</p>
+</header>
+
+<main>
+  <section class="card">
+    <form id="f" autocomplete="off">
+      <label for="q">اكتب اسمك أو رقمك القومي أو رقم جواز السفر</label>
+      <div class="row">
+        <input id="q" type="search" inputmode="search" placeholder="الاسم، أو الرقم القومي، أو رقم جواز السفر" enterkeyhint="search" disabled>
+        <button class="go" type="submit" disabled id="btn">استعلام</button>
+      </div>
+      <p class="hint" id="hint">جارٍ تحميل البيانات…</p>
+    </form>
+
+    <div id="out" aria-live="polite"></div>
+
+    <div class="notice">
+      <b>تنبيه مهم:</b> اسم المستخدم وكلمة المرور للدخول إلى الموقع الرسمي هما <b>الرقم القومي</b> الخاص بك (أو <b>رقم جواز السفر</b> للدارسين الأجانب).
+    </div>
+
+    <div class="links">
+      <a class="btn main" href="https://monline-five.vercel.app/platform-applicants" target="_blank" rel="noopener">زيارة الموقع الرسمي لمزيد من التفاصيل ↗</a>
+    </div>
+
+    <div class="help">
+      في حال وجود أي مشكلة في الاستعلام، برجاء الانضمام إلى مجموعة الواتساب التالية للاستفسار:
+      <div class="links"><a class="btn wa" href="https://chat.whatsapp.com/JaBqmFiNaO7KC463fmeLDR" target="_blank" rel="noopener">الانضمام إلى مجموعة الواتساب</a></div>
+    </div>
+  </section>
+</main>
+<footer>هذه الصفحة للاستعلام المساعد فقط، والمرجع الرسمي هو الموقع الرسمي للمنصة.</footer>
+
+<script>
+(function(){
+  var DB=null, $=function(id){return document.getElementById(id)};
+  var out=$("out"), q=$("q"), btn=$("btn"), hint=$("hint");
+
+  // ---------- Arabic normalisation (hamza, ya/alef-maqsura, ta-marbuta, diacritics, digits) ----------
+  function norm(s){
+    return String(s||"")
+      .replace(/[ً-ٰٟـۖ-ۭ]/g,"")      // tashkeel, tatweel
+      .replace(/[آأإٱ]/g,"ا")              // آ أ إ ٱ -> ا
+      .replace(/[ىيیئ]/g,"ي")              // ى ي ی ئ -> ي
+      .replace(/ة/g,"ه")                                  // ة -> ه
+      .replace(/ؤ/g,"و")                                  // ؤ -> و
+      .replace(/ء/g,"")                                        // ء
+      .replace(/[٠-٩]/g,function(d){return d.charCodeAt(0)-0x660})
+      .replace(/[۰-۹]/g,function(d){return d.charCodeAt(0)-0x6F0})
+      .replace(/[^؀-ۿa-z0-9\s]/gi," ")
+      .replace(/\s+/g," ").trim().toLowerCase();
+  }
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+  function lev(a,b){ // small edit distance
+    if(a===b)return 0; var m=a.length,n=b.length; if(!m)return n; if(!n)return m;
+    var p=[],i,j; for(j=0;j<=n;j++)p[j]=j;
+    for(i=1;i<=m;i++){var c=[i]; for(j=1;j<=n;j++) c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1)); p=c}
+    return p[n];
+  }
+  async function sha(s){
+    var buf=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));
+    return Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,"0")}).join("").slice(0,20);
+  }
+
+  // ---------- date / time display ----------
+  function fmtDate(iso){
+    if(!iso) return null;
+    var p=iso.split("-"); var d=new Date(Date.UTC(+p[0],+p[1]-1,+p[2]));
+    return new Intl.DateTimeFormat("ar-EG-u-nu-latn",{weekday:"long",day:"numeric",month:"long",year:"numeric",timeZone:"UTC"}).format(d);
+  }
+  function card(r){
+    var date=fmtDate(DB.dates[r.d]), slot=DB.slots[r.s];
+    var body = date
+      ? '<dt>تاريخ الاختبار</dt><dd class="big">'+esc(date)+'</dd><dt>وقت الاختبار</dt><dd class="big">'+esc(slot)+'</dd>'
+      : '<dt>الحالة</dt><dd>لم يُحدَّد موعد اختبار لك بعد، برجاء التواصل عبر مجموعة الواتساب.</dd>';
+    return '<div class="result"><div class="who">'+esc(r.name)+'</div><dl>'+body+'</dl></div>';
+  }
+
+  // ---------- search ----------
+  function byName(query){
+    var qt=norm(query).split(" ").filter(Boolean);
+    var res=[];
+    for(var i=0;i<DB.n.length;i++){
+      var toks=DB.t[i], score=0, ok=true;
+      for(var k=0;k<qt.length;k++){
+        var w=qt[k], best=99;
+        for(var j=0;j<toks.length;j++){
+          var t=toks[j];
+          if(t===w){best=0;break}
+          if(t.indexOf(w)===0){best=Math.min(best,0.3);continue}
+          if(w.length>=3 && t.indexOf(w)>-1){best=Math.min(best,0.6);continue}
+          if(w.length>=3){var d=lev(t,w); if(d<=(w.length>=6?2:1)) best=Math.min(best,d)}
+        }
+        if(best===99){ok=false;break}
+        score+=best;
+      }
+      if(ok){ // prefer names that start like the query and are shorter (closer matches)
+        if(DB.n[i].indexOf(qt[0])===0) score-=0.2;
+        res.push({i:i,score:score+toks.length*0.01});
+      }
+    }
+    res.sort(function(a,b){return a.score-b.score});
+    return res;
+  }
+  function rec(i){var r=DB.rows[i];return {name:r[0],d:r[2],s:r[3]}}
+
+  async function run(){
+    var raw=q.value.trim();
+    out.innerHTML="";
+    if(!raw){out.innerHTML='<div class="msg err">من فضلك اكتب الاسم أو الرقم القومي.</div>';return}
+    var idq=raw.replace(/[\u200e\u200f\u202a-\u202e\u2066-\u2069]/g,"").replace(/[\u0660-\u0669]/g,function(d){return d.charCodeAt(0)-0x660}).replace(/[\u06F0-\u06F9]/g,function(d){return d.charCodeAt(0)-0x6F0}).replace(/[\s\-]/g,"").toUpperCase();
+    if(/^[A-Z0-9]{6,20}$/.test(idq) && /\d/.test(idq)){
+      if(/^\d+$/.test(idq) && (idq.length<13||idq.length>15)){out.innerHTML='<div class="msg err">الرقم القومي يتكون من 14 رقمًا. تأكد من الرقم وأعد المحاولة، أو ابحث بالاسم.</div>';return}
+      var h=await sha(DB.salt+idq), hit=-1;
+      for(var i=0;i<DB.rows.length;i++){ if(DB.rows[i][1]===h){hit=i;break} }
+      out.innerHTML = hit<0
+        ? '<div class="msg err">لم نعثر على هذا الرقم. تأكد من الرقم القومي (أو رقم جواز السفر)، أو ابحث بالاسم، أو انضم إلى مجموعة الواتساب أدناه للاستفسار.</div>'
+        : card(rec(hit));
+      return;
+    }
+    if(/^\d+$/.test(idq)){out.innerHTML='<div class="msg err">الرقم القومي يتكون من 14 رقمًا. تأكد من الرقم وأعد المحاولة.</div>';return}
+    var words=norm(raw).split(" ").filter(Boolean);
+    if(words.length<2){out.innerHTML='<div class="msg err">اكتب الاسم الأول والثاني على الأقل (كلمتين) لتظهر لك نتائج دقيقة.</div>';return}
+    var res=byName(raw);
+    if(!res.length){out.innerHTML='<div class="msg err">لم نعثر على اسم مطابق. جرّب كتابة الاسم بشكل آخر أو ابحث بالرقم القومي، وفي حال استمرار المشكلة انضم إلى مجموعة الواتساب أدناه.</div>';return}
+    if(res.length===1){out.innerHTML=card(rec(res[0].i));return}
+    var shown=res.slice(0,15);
+    var html='<div class="msg">وجدنا <b>'+res.length+'</b> أسماء متشابهة'+(res.length>shown.length?' (نعرض أقربها '+shown.length+')':'')+'، اختر اسمك:</div>';
+    shown.forEach(function(x,idx){html+='<button type="button" class="pick" data-i="'+x.i+'"><span>'+esc(DB.rows[x.i][0])+'</span><span>عرض الموعد ◂</span></button>'});
+    if(res.length>shown.length) html+='<p class="hint">لتضييق النتائج أضف مزيدًا من الاسم (الاسم الثالث أو الرابع) أو استخدم الرقم القومي.</p>';
+    out.innerHTML=html;
+  }
+
+  out.addEventListener("click",function(e){
+    var b=e.target.closest(".pick"); if(!b)return;
+    out.innerHTML=card(rec(+b.dataset.i)) + '<p class="hint"><a href="#" id="back">◂ العودة إلى نتائج البحث</a></p>';
+    $("back").onclick=function(ev){ev.preventDefault();run()};
+  });
+  $("f").addEventListener("submit",function(e){e.preventDefault();if(DB)run()});
+
+  fetch("data.json",{cache:"no-cache"}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
+    DB=d; DB.n=DB.rows.map(function(r){return norm(r[0])}); DB.t=DB.n.map(function(s){return s.split(" ")});
+    q.disabled=false; btn.disabled=false; hint.textContent="يمكنك الكتابة بدون الاهتمام بالهمزات (أ، إ، ا) أو (ى، ي) أو (ة، ه)؛ وسنعرض لك الأسماء المتشابهة."; q.focus();
+  }).catch(function(){hint.textContent="تعذّر تحميل البيانات، برجاء تحديث الصفحة أو التواصل عبر مجموعة الواتساب."});
+})();
+</script>
+</body>
+</html>
