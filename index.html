@@ -272,7 +272,8 @@ function refreshFeet(){
       el.innerHTML=`<a class="teams" href="${esc(safe)}" target="_blank" rel="noopener noreferrer">الدخول إلى الاختبار عبر Microsoft Teams ◂</a>
         <p class="note">الرابط متاح حتى الساعة <b>${clock12(w.close)}</b>. يرجى الدخول في الموعد المحدد لك.</p>`;
     }else if(state==='before'){
-      const sameDay=Math.floor(now/86400000)===Math.floor(w.open/86400000);
+      const ownDay = r[3]<0 || DATA.dates[r[3]]===new Date(w.open).toISOString().slice(0,10);   // العداد يظهر في يوم الدارس الأصلي فقط
+      const sameDay=ownDay && Math.floor(now/86400000)===Math.floor(w.open/86400000);
       el.innerHTML=sameDay
         ?`<div class="waitbox">🔒 يظهر رابط الاختبار هنا قبل موعدك بربع ساعة:<br><b>اليوم الساعة ${clock12(w.open)}</b><br>متبقي على ظهور الرابط: <b>${remaining(w.open-now)}</b></div>`
         :`<div class="waitbox">🔒 يظهر رابط الاختبار هنا قبل موعدك بربع ساعة.</div>`;
